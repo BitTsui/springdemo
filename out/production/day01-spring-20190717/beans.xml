@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+    <!--配置一个bean对象：
+            id为实例的一个对象名
+            class为实现实例的一个Impl类-->
+    <bean id="userService" class="tsui.service.UserServiceImpl">
+        <!--依赖注入数据，调用属性的set方法。
+            相当于内部创建对象调用set方法。
+                如果属性没有set方法，会报对象创建异常-->
+        <property name="name" value="张依方（依赖注入）"></property>
+    </bean>
+</beans>
